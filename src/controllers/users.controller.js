@@ -85,7 +85,7 @@ const getAllUsers = (req, res) => {
         - (new Date(a.updatedAt).getTime()));
 
       const userInfo = lodash.map(allusers, lodash.partialRight(lodash.pick,
-        ['_id', 'email', 'role', 'busId', 'createdAt', 'updatedAt']));
+        ['id', 'email', 'role', 'busId', 'createdAt', 'updatedAt']));
 
       res.status(200).json({ status: 200, data: userInfo });
     })
